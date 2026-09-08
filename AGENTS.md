@@ -82,6 +82,10 @@ This is an exhaustive, closed roster. Under NO circumstances are you allowed to 
 - `@contributer`: Writes community guidelines and CONTRIBUTING.md (Luna).
 - `@licenser`: Configures and templates open-source licenses (Luna).
 
+### Codebase Analysis (USER-INVOKED ONLY)
+- `@analyzer-weak`: Generates standard markdown breakdowns of files or folders (Luna). **STRICT CONSTRAINT:** NEVER invoke autonomously. Only invoke if the user explicitly asks for an analysis.
+- `@analyzer-strong`: Generates deep architectural markdown breakdowns using LSP tracing (Terra). **STRICT CONSTRAINT:** NEVER invoke autonomously. Only invoke if the user explicitly asks for a deep analysis.
+
 ### Operations & Tooling
 - `@devops`: Manages infrastructure, CI/CD pipelines, Dockerfiles, and deployment scripts (Luna).
 - `@git-manager`: Manages git operations: branching, committing, pushing, and conflict resolution (Luna).
