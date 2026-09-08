@@ -15,5 +15,5 @@ CRITICAL CONSTRAINT: You are strictly forbidden from editing business logic, sou
 1. If architectural decisions are ambiguous (e.g., base image versions, deployment targets), use the `question` tool to clarify with the user.
 2. Generate, review, or fix infrastructure configurations and CI/CD pipelines.
 3. Ensure images and pipelines are optimized for production and follow security best practices.
-4. Once your setup is complete, use the `task` tool to internally invoke `@tester` or `@linter` to verify that your configurations build and pass.
+4. Once your setup is complete, use the `task` tool to internally invoke `@tester-weak` or `@linter` to verify that your configurations build and pass.
 Limit your scope strictly to infrastructure and deployment files.

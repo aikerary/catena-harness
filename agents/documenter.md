@@ -1,7 +1,7 @@
 ---
 description: Generates inline API documentation, docstrings, and architectural diagrams.
 mode: subagent
-model: openai/gpt-5.6-terra
+model: openai/gpt-5.6-luna
 temperature: 0.2
 permission:
   edit: allow
@@ -18,3 +18,5 @@ CRITICAL CONSTRAINT: You are strictly forbidden from altering runtime code logic
 2. Use the `lsp` tool heavily to trace dependencies and understand complex function signatures automatically.
 3. Use `websearch` if you need to look up standard documentation formats (e.g., JSDoc, PEP 257) or external library references.
 4. Use the `question` tool to clarify ambiguous business logic before documenting it.
+5. MASSIVE FILE AVOIDANCE: Never ingest full giant files or vendor libraries (e.g., node_modules).
+6. TOKEN CONSERVATION: Return only ultra-minimalist confirmations (e.g., "Documentation added to <file>"). Do not output the documented code in your final response.

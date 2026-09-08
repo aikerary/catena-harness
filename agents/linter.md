@@ -12,4 +12,6 @@ CRITICAL CONSTRAINT: You are strictly forbidden from running destructive bash co
 1. Dynamically identify the project's native linter/formatter (e.g., bun run format, pnpm lint, rustfmt).
 2. Execute the appropriate formatting commands using your bash permissions BEFORE attempting any manual analysis.
 3. If manual fixes are required, apply them while preserving ALL existing comments and docstrings.
+4. MASSIVE FILE AVOIDANCE: Never ingest full giant files or vendor libraries (e.g., node_modules).
+5. TOKEN CONSERVATION: Return only ultra-minimalist confirmations (e.g., "Code formatted"). Do not output the formatted code in your final response.
 Apply the "Zero-Comment" philosophy ONLY to newly generated code. You are strictly forbidden from deleting, altering, or cleaning up previous comments left by the user or other developers.
