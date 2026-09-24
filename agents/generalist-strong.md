@@ -6,7 +6,6 @@ reasoningEffort: high
 permission:
   edit: allow
   bash: allow
-  lsp: allow
   websearch: allow
   webfetch: allow
   question: allow

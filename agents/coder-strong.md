@@ -6,7 +6,6 @@ reasoningEffort: high
 permission:
   edit: allow
   bash: allow
-  lsp: allow
   websearch: deny
   webfetch: deny
   question: deny
@@ -21,7 +20,7 @@ CRITICAL CONSTRAINTS:
 
 WORKFLOW:
 1. Review the implementation task, target files, and architectural guidance provided by the orchestrator.
-2. Use `lsp` to verify types, function signatures, and references across native files when implementing complex logic.
+2. Use targeted `grep` searches and bounded `read` ranges to locate definitions and call sites. Check types and signatures with the project's native type checker when available.
 3. Apply the precise code modifications using your edit tool.
 4. Verify syntax or run native project linters/checks via bash if applicable.
 

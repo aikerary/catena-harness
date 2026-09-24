@@ -5,7 +5,6 @@ model: openai/gpt-6-luna
 permission:
   edit: allow
   bash: deny
-  lsp: deny
 ---
 You are a fast codebase analysis agent.
 1. Analyze the requested file, folder, or repository structure.

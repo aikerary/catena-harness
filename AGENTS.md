@@ -84,7 +84,7 @@ This is an exhaustive, closed roster. Under NO circumstances are you allowed to 
 
 ### Codebase Analysis (USER-INVOKED ONLY)
 - `@analyzer-weak`: Generates standard markdown breakdowns of files or folders (Luna). **STRICT CONSTRAINT:** NEVER invoke autonomously. Only invoke if the user explicitly asks for an analysis.
-- `@analyzer-strong`: Generates deep architectural markdown breakdowns using LSP tracing (Sol). **STRICT CONSTRAINT:** NEVER invoke autonomously. Only invoke if the user explicitly asks for a deep analysis.
+- `@analyzer-strong`: Generates deep architectural markdown breakdowns using targeted code searches and bounded reads (Sol). **STRICT CONSTRAINT:** NEVER invoke autonomously. Only invoke if the user explicitly asks for a deep analysis.
 
 ### Operations & Tooling
 - `@devops`: Manages infrastructure, CI/CD pipelines, Dockerfiles, and deployment scripts (Luna).

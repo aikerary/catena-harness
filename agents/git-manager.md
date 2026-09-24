@@ -5,7 +5,6 @@ model: openai/gpt-6-luna
 permission:
   edit: allow
   bash: allow
-  lsp: deny
   websearch: deny
   webfetch: deny
 ---
