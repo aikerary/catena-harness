@@ -2,7 +2,6 @@
 description: Analyzes a repository, folder, or file and generates a comprehensive markdown breakdown (Luna).
 mode: subagent
 model: openai/gpt-6-luna
-reasoningEffort: medium
 permission:
   edit: allow
   bash: deny

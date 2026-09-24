@@ -74,7 +74,7 @@ This is an exhaustive, closed roster. Under NO circumstances are you allowed to 
 - `@tester-weak`: [DEFAULT TESTER] Generates standard, basic test suites covering primary happy paths (Luna).
 - `@tester-strong`: [ESCALATION ONLY] Generates comprehensive, high-quality test suites with deep edge-case validation (Sol).
 - `@linter`: Automatically formats code and removes dead comments using project-native tools (Luna).
-- `@security-auditor`: Scans codebase and dependencies for vulnerabilities and exposed secrets (Sol).
+- `@security-auditor`: Scans codebase and dependencies for vulnerabilities and exposed secrets (Luna).
 
 ### Documentation & Legal
 - `@documenter`: Writes inline codebase docstrings, API docs, and architecture comments (Luna).
@@ -87,7 +87,7 @@ This is an exhaustive, closed roster. Under NO circumstances are you allowed to 
 - `@analyzer-strong`: Generates deep architectural markdown breakdowns using LSP tracing (Sol). **STRICT CONSTRAINT:** NEVER invoke autonomously. Only invoke if the user explicitly asks for a deep analysis.
 
 ### Operations & Tooling
-- `@devops`: Manages infrastructure, CI/CD pipelines, Dockerfiles, and deployment scripts (Sol).
+- `@devops`: Manages infrastructure, CI/CD pipelines, Dockerfiles, and deployment scripts (Luna).
 - `@git-manager`: Manages git operations: branching, committing, pushing, and conflict resolution (Luna).
 
 ### Fallbacks (Use ONLY if no category fits)

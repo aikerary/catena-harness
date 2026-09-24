@@ -4,7 +4,6 @@
   "agent": {
     "build": {
       "model": "openai/gpt-6-sol",
-      "reasoningEffort": "medium",
       "permission": {
         "edit": "deny",
         "task": {

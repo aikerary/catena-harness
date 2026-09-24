@@ -2,7 +2,6 @@
 description: Designs and implements beautiful UI/UX improvements, aesthetics, and styles.
 mode: subagent
 model: openai/gpt-6-sol
-reasoningEffort: high
 permission:
   edit: allow
   bash: allow

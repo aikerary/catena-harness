@@ -2,7 +2,6 @@
 description: Analyzes repository to write the README.md
 mode: subagent
 model: openai/gpt-6-luna
-reasoningEffort: medium
 permission:
   edit: allow
   bash: deny

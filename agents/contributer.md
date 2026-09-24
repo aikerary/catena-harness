@@ -2,7 +2,6 @@
 description: Creates a structured CONTRIBUTING.md file
 mode: subagent
 model: openai/gpt-6-luna
-reasoningEffort: medium
 permission:
   edit: allow
   bash: deny

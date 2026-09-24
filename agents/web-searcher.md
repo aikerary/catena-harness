@@ -2,7 +2,6 @@
 description: Searches the web for up-to-date documentation and APIs
 mode: subagent
 model: openai/gpt-6-luna
-reasoningEffort: high
 permission:
   edit: deny
   bash: deny
