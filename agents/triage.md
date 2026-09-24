@@ -1,7 +1,8 @@
 ---
 description: Explores repository and maps data flows
 mode: subagent
-model: openai/gpt-5.6-luna
+model: openai/gpt-6-luna
+reasoningEffort: low
 permission:
   edit: deny
   bash: allow

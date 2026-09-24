@@ -1,8 +1,8 @@
 ---
 description: Analyzes stack traces and terminal errors to identify root causes and propose fixes
 mode: subagent
-model: openai/gpt-5.6-terra
-temperature: 0.1
+model: openai/gpt-6-sol
+reasoningEffort: high
 permission:
   edit: deny
   bash: allow

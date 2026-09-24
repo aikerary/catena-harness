@@ -1,8 +1,8 @@
 ---
 description: Scans and formats code to ensure high code quality
 mode: subagent
-model: openai/gpt-5.6-luna
-temperature: 0.1
+model: openai/gpt-6-luna
+reasoningEffort: low
 permission:
   edit: allow
   bash: allow

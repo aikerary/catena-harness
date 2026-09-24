@@ -1,8 +1,8 @@
 ---
 description: Designs and implements beautiful UI/UX improvements, aesthetics, and styles.
 mode: subagent
-model: openai/gpt-5.6-terra
-temperature: 0.8
+model: openai/gpt-6-sol
+reasoningEffort: high
 permission:
   edit: allow
   bash: allow

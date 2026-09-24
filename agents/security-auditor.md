@@ -1,8 +1,8 @@
 ---
 description: Scans code and dependency files for vulnerabilities, exposed credentials, and bad practices
 mode: subagent
-model: openai/gpt-5.6-luna
-temperature: 0.1
+model: openai/gpt-6-sol
+reasoningEffort: high
 permission:
   edit: deny
   bash: allow

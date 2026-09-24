@@ -1,8 +1,8 @@
 ---
 description: Configures and manages infrastructure, containers, and CI/CD pipelines
 mode: subagent
-model: openai/gpt-5.6-luna
-temperature: 0.1
+model: openai/gpt-6-sol
+reasoningEffort: medium
 permission:
   edit: allow
   bash: allow

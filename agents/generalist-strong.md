@@ -1,8 +1,8 @@
 ---
 description: Fallback generalist agent for complex tasks requiring deep reasoning when no specialized agent fits
 mode: subagent
-model: openai/gpt-5.6-terra
-temperature: 0.3
+model: openai/gpt-6-sol
+reasoningEffort: high
 permission:
   edit: allow
   bash: allow

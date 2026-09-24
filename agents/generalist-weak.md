@@ -1,8 +1,8 @@
 ---
 description: Fallback generalist agent for simple, lightweight tasks when no specialized agent fits
 mode: subagent
-model: openai/gpt-5.6-luna
-temperature: 0.3
+model: openai/gpt-6-luna
+reasoningEffort: medium
 permission:
   edit: allow
   bash: allow

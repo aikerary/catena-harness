@@ -1,8 +1,8 @@
 ---
 description: Analyzes and writes comprehensive, high-quality automated tests for implemented code
 mode: subagent
-model: openai/gpt-5.6-terra
-temperature: 0.4
+model: openai/gpt-6-sol
+reasoningEffort: high
 permission:
   edit: allow
   bash: allow

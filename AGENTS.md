@@ -62,19 +62,19 @@ This is an exhaustive, closed roster. Under NO circumstances are you allowed to 
 
 ### Discovery & Diagnostics
 - `@triage`: Fast directory explorer. Maps file paths, payload contracts, and project structures (Luna).
-- `@debugger`: Analyzes stack traces and terminal errors to find root causes. Use for broken builds or runtime crashes (Luna).
+- `@debugger`: Analyzes stack traces and terminal errors to find root causes. Use for broken builds or runtime crashes (Sol).
 - `@web-searcher`: Researches external libraries, APIs, and online documentation. Use when lacking up-to-date knowledge (Luna).
 
 ### Core Engineering
 - `@coder-weak`: [DEFAULT CODER] Applies surgical patches, straightforward bugfixes, and standard code modifications. Highly cost-effective (Luna). Strictly forbidden from touching docs.
-- `@coder-strong`: [ESCALATION ONLY] Implements complex architecture, sophisticated features, and cross-module refactors. Use only when deep reasoning is required (Terra). Strictly forbidden from touching docs.
-- `@ui-designer`: Designs and implements aesthetic UI/UX frontend improvements and component styling (Terra).
+- `@coder-strong`: [ESCALATION ONLY] Implements complex architecture, sophisticated features, and cross-module refactors. Use only when deep reasoning is required (Sol). Strictly forbidden from touching docs.
+- `@ui-designer`: Designs and implements aesthetic UI/UX frontend improvements and component styling (Sol).
 
 ### Quality Assurance
 - `@tester-weak`: [DEFAULT TESTER] Generates standard, basic test suites covering primary happy paths (Luna).
-- `@tester-strong`: [ESCALATION ONLY] Generates comprehensive, high-quality test suites with deep edge-case validation (Terra).
+- `@tester-strong`: [ESCALATION ONLY] Generates comprehensive, high-quality test suites with deep edge-case validation (Sol).
 - `@linter`: Automatically formats code and removes dead comments using project-native tools (Luna).
-- `@security-auditor`: Scans codebase and dependencies for vulnerabilities and exposed secrets (Luna).
+- `@security-auditor`: Scans codebase and dependencies for vulnerabilities and exposed secrets (Sol).
 
 ### Documentation & Legal
 - `@documenter`: Writes inline codebase docstrings, API docs, and architecture comments (Luna).
@@ -84,12 +84,12 @@ This is an exhaustive, closed roster. Under NO circumstances are you allowed to 
 
 ### Codebase Analysis (USER-INVOKED ONLY)
 - `@analyzer-weak`: Generates standard markdown breakdowns of files or folders (Luna). **STRICT CONSTRAINT:** NEVER invoke autonomously. Only invoke if the user explicitly asks for an analysis.
-- `@analyzer-strong`: Generates deep architectural markdown breakdowns using LSP tracing (Terra). **STRICT CONSTRAINT:** NEVER invoke autonomously. Only invoke if the user explicitly asks for a deep analysis.
+- `@analyzer-strong`: Generates deep architectural markdown breakdowns using LSP tracing (Sol). **STRICT CONSTRAINT:** NEVER invoke autonomously. Only invoke if the user explicitly asks for a deep analysis.
 
 ### Operations & Tooling
-- `@devops`: Manages infrastructure, CI/CD pipelines, Dockerfiles, and deployment scripts (Luna).
+- `@devops`: Manages infrastructure, CI/CD pipelines, Dockerfiles, and deployment scripts (Sol).
 - `@git-manager`: Manages git operations: branching, committing, pushing, and conflict resolution (Luna).
 
 ### Fallbacks (Use ONLY if no category fits)
 - `@generalist-weak`: Fallback for simple, high-volume tasks requiring minimal reasoning (Luna).
-- `@generalist-strong`: Fallback for exceptionally complex, multi-step tasks lacking a specialized agent (Terra).
+- `@generalist-strong`: Fallback for exceptionally complex, multi-step tasks lacking a specialized agent (Sol).

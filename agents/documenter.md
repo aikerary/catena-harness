@@ -1,8 +1,8 @@
 ---
 description: Generates inline API documentation, docstrings, and architectural diagrams.
 mode: subagent
-model: openai/gpt-5.6-luna
-temperature: 0.2
+model: openai/gpt-6-luna
+reasoningEffort: medium
 permission:
   edit: allow
   bash: allow

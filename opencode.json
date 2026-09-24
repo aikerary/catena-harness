@@ -3,9 +3,32 @@
   "default_agent": "build",
   "agent": {
     "build": {
+      "model": "openai/gpt-6-sol",
+      "reasoningEffort": "medium",
       "permission": {
+        "edit": "deny",
         "task": {
-          "*": "allow"
+          "*": "deny",
+          "triage": "allow",
+          "debugger": "allow",
+          "web-searcher": "allow",
+          "coder-weak": "allow",
+          "coder-strong": "allow",
+          "ui-designer": "allow",
+          "tester-weak": "allow",
+          "tester-strong": "allow",
+          "linter": "allow",
+          "security-auditor": "allow",
+          "documenter": "allow",
+          "readmer": "allow",
+          "contributer": "allow",
+          "licenser": "allow",
+          "analyzer-weak": "allow",
+          "analyzer-strong": "allow",
+          "devops": "allow",
+          "git-manager": "allow",
+          "generalist-weak": "allow",
+          "generalist-strong": "allow"
         }
       }
     }

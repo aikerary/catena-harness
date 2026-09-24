@@ -1,8 +1,8 @@
 ---
 description: Applies surgical patches, straightforward bugfixes, and standard code modifications
 mode: subagent
-model: openai/gpt-5.6-luna
-temperature: 0.1
+model: openai/gpt-6-luna
+reasoningEffort: high
 permission:
   edit: allow
   bash: allow

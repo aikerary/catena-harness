@@ -1,8 +1,8 @@
 ---
 description: Manages local and remote git repositories, staging, committing, pushing, pulling, and resolving conflicts
 mode: subagent
-model: openai/gpt-5.6-luna
-temperature: 0.1
+model: openai/gpt-6-luna
+reasoningEffort: high
 permission:
   edit: allow
   bash: allow

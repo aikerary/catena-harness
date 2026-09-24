@@ -1,8 +1,8 @@
 ---
 description: Implements complex logic, sophisticated features, and non-trivial refactors requiring deep reasoning
 mode: subagent
-model: openai/gpt-5.6-terra
-temperature: 0.2
+model: openai/gpt-6-sol
+reasoningEffort: high
 permission:
   edit: allow
   bash: allow

@@ -1,8 +1,8 @@
 ---
-description: Deeply analyzes a repository, folder, or complex file to generate an exhaustive architectural markdown breakdown (Terra).
+description: Deeply analyzes a repository, folder, or complex file to generate an exhaustive architectural markdown breakdown (Sol).
 mode: subagent
-model: openai/gpt-5.6-terra
-temperature: 0.3
+model: openai/gpt-6-sol
+reasoningEffort: high
 permission:
   edit: allow
   bash: deny

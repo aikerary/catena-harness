@@ -1,8 +1,8 @@
 ---
 description: Analyzes repository to write the README.md
 mode: subagent
-model: openai/gpt-5.6-luna
-temperature: 0.4
+model: openai/gpt-6-luna
+reasoningEffort: medium
 permission:
   edit: allow
   bash: deny

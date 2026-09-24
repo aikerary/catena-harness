@@ -1,8 +1,8 @@
 ---
 description: Analyzes and writes standard automated tests for implemented code
 mode: subagent
-model: openai/gpt-5.6-luna
-temperature: 0.4
+model: openai/gpt-6-luna
+reasoningEffort: high
 permission:
   edit: allow
   bash: allow
