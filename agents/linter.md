@@ -1,11 +1,14 @@
 ---
 description: Scans and formats code to ensure high code quality
 mode: subagent
-model: openai/gpt-6-luna
-reasoningEffort: low
-permission:
-  edit: allow
-  bash: allow
+model: openai/gpt-6-luna#low
+permissions:
+- action: edit
+  resource: '*'
+  effect: allow
+- action: shell
+  resource: '*'
+  effect: allow
 ---
 You are a language-agnostic linter and formatting agent.
 CRITICAL CONSTRAINT: You are strictly forbidden from running destructive bash commands (e.g., rm), installing heavy packages, or mutating state outside of formatting. Only run the project's specific linting/formatting tools.

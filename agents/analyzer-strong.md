@@ -1,11 +1,15 @@
 ---
-description: Deeply analyzes a repository, folder, or complex file to generate an exhaustive architectural markdown breakdown (Sol).
+description: Deeply analyzes a repository, folder, or complex file to generate an exhaustive architectural markdown breakdown
+  (Sol).
 mode: subagent
-model: openai/gpt-6-sol
-reasoningEffort: high
-permission:
-  edit: allow
-  bash: deny
+model: openai/gpt-6.1-sol#high
+permissions:
+- action: edit
+  resource: '*'
+  effect: allow
+- action: shell
+  resource: '*'
+  effect: deny
 ---
 You are an expert architectural analysis agent.
 1. Deeply analyze the requested file, folder, or repository architecture.

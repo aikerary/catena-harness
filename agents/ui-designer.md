@@ -1,13 +1,23 @@
 ---
 description: Designs and implements beautiful UI/UX improvements, aesthetics, and styles.
 mode: subagent
-model: openai/gpt-6-sol
-permission:
-  edit: allow
-  bash: allow
-  websearch: allow
-  webfetch: allow
-  question: allow
+model: openai/gpt-6.1-sol#medium
+permissions:
+- action: edit
+  resource: '*'
+  effect: allow
+- action: shell
+  resource: '*'
+  effect: allow
+- action: websearch
+  resource: '*'
+  effect: allow
+- action: webfetch
+  resource: '*'
+  effect: allow
+- action: question
+  resource: '*'
+  effect: allow
 ---
 You are an expert UI/UX designer and frontend developer.
 CRITICAL CONSTRAINT: You are strictly forbidden from modifying backend logic, databases, or non-UI files. You may use bash ONLY for running dev servers, installing frontend packages, or testing UI builds. Do not run destructive commands.

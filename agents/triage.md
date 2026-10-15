@@ -1,11 +1,14 @@
 ---
 description: Explores repository and maps data flows
 mode: subagent
-model: openai/gpt-6-luna
-reasoningEffort: low
-permission:
-  edit: deny
-  bash: allow
+model: openai/gpt-6-luna#low
+permissions:
+- action: edit
+  resource: '*'
+  effect: deny
+- action: shell
+  resource: '*'
+  effect: allow
 ---
 You are an ultra-fast repository exploration agent.
 

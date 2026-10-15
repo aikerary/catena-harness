@@ -1,36 +1,38 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "default_agent": "build",
-  "lsp": false,
-  "agent": {
+  "model": "openai/gpt-6.1-sol",
+  "update": "notify",
+  "permissions": [
+    { "action": "subagent", "resource": "*", "effect": "deny" }
+  ],
+  "agents": {
     "build": {
-      "model": "openai/gpt-6-sol",
-      "permission": {
-        "edit": "deny",
-        "task": {
-          "*": "deny",
-          "triage": "allow",
-          "debugger": "allow",
-          "web-searcher": "allow",
-          "coder-weak": "allow",
-          "coder-strong": "allow",
-          "ui-designer": "allow",
-          "tester-weak": "allow",
-          "tester-strong": "allow",
-          "linter": "allow",
-          "security-auditor": "allow",
-          "documenter": "allow",
-          "readmer": "allow",
-          "contributer": "allow",
-          "licenser": "allow",
-          "analyzer-weak": "allow",
-          "analyzer-strong": "allow",
-          "devops": "allow",
-          "git-manager": "allow",
-          "generalist-weak": "allow",
-          "generalist-strong": "allow"
-        }
-      }
+      "model": "openai/gpt-6.1-sol#medium",
+      "permissions": [
+        { "action": "edit", "resource": "*", "effect": "deny" },
+        { "action": "question", "resource": "*", "effect": "allow" },
+        { "action": "subagent", "resource": "triage", "effect": "allow" },
+        { "action": "subagent", "resource": "debugger", "effect": "allow" },
+        { "action": "subagent", "resource": "web-searcher", "effect": "allow" },
+        { "action": "subagent", "resource": "coder-weak", "effect": "allow" },
+        { "action": "subagent", "resource": "coder-strong", "effect": "allow" },
+        { "action": "subagent", "resource": "ui-designer", "effect": "allow" },
+        { "action": "subagent", "resource": "tester-weak", "effect": "allow" },
+        { "action": "subagent", "resource": "tester-strong", "effect": "allow" },
+        { "action": "subagent", "resource": "linter", "effect": "allow" },
+        { "action": "subagent", "resource": "security-auditor", "effect": "allow" },
+        { "action": "subagent", "resource": "documenter", "effect": "allow" },
+        { "action": "subagent", "resource": "readmer", "effect": "allow" },
+        { "action": "subagent", "resource": "contributer", "effect": "allow" },
+        { "action": "subagent", "resource": "licenser", "effect": "allow" },
+        { "action": "subagent", "resource": "analyzer-weak", "effect": "allow" },
+        { "action": "subagent", "resource": "analyzer-strong", "effect": "allow" },
+        { "action": "subagent", "resource": "devops", "effect": "allow" },
+        { "action": "subagent", "resource": "git-manager", "effect": "allow" },
+        { "action": "subagent", "resource": "generalist-weak", "effect": "allow" },
+        { "action": "subagent", "resource": "generalist-strong", "effect": "allow" }
+      ]
     }
   }
 }

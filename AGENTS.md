@@ -20,6 +20,8 @@ To preserve context limits and optimize execution costs, you are subject to the 
 3. DYNAMIC WORKFLOW
 While delegation to subagents is strictly required, the *order* and *manner* in which you orchestrate them is dynamic. Adapt your strategy to the specific problem. Choose WHICH subagents to call and in WHAT order based on the task requirements. Do not artificially force a rigid step-by-step sequence if the task does not logically require it.
 
+OpenCode 2 uses the `subagent` tool for delegation and `shell` for terminal commands. Subagents run in separate sessions and cannot launch further subagents under this harness; coordinate any follow-up specialist yourself. Each agent's model variant sets its own reasoning effort, so use the configured specialist rather than raising the effort of every agent. Selecting a primary agent alone does not change the session model: use `/strong <task>` to select Build-strong with Astra high and `/standard <task>` to return to build with Sol 6.1 medium. OpenCode 2 has no active LSP tools: use targeted searches and project-native lint, typecheck, or compiler commands when needed. Preserve each specialized agent's existing `question` behavior, including UI style and documentation preferences.
+
 4. EXTERNAL FILE LOADING (COST-OPTIMIZATION)
 To save context window tokens, do not load all guidelines at once. When you encounter a file reference (e.g., `@rules/general.md` or `@docs/architecture.md`), use your Read tool to load it ONLY on a need-to-know basis.
 - Treat loaded content as mandatory instructions.

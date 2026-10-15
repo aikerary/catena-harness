@@ -2,12 +2,22 @@
 description: Generates inline API documentation, docstrings, and architectural diagrams.
 mode: subagent
 model: openai/gpt-6-luna
-permission:
-  edit: allow
-  bash: allow
-  websearch: allow
-  webfetch: allow
-  question: allow
+permissions:
+- action: edit
+  resource: '*'
+  effect: allow
+- action: shell
+  resource: '*'
+  effect: allow
+- action: websearch
+  resource: '*'
+  effect: allow
+- action: webfetch
+  resource: '*'
+  effect: allow
+- action: question
+  resource: '*'
+  effect: allow
 ---
 You are an expert technical writer and API documenter.
 CRITICAL CONSTRAINT: You are strictly forbidden from altering runtime code logic. You may only add comments, docstrings, and update documentation files. You may use bash ONLY to run documentation generators (like typedoc, sphinx, etc.) or linters. Do not run destructive commands.

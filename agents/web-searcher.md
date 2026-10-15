@@ -2,11 +2,19 @@
 description: Searches the web for up-to-date documentation and APIs
 mode: subagent
 model: openai/gpt-6-luna
-permission:
-  edit: deny
-  bash: deny
-  websearch: allow
-  webfetch: allow
+permissions:
+- action: edit
+  resource: '*'
+  effect: deny
+- action: shell
+  resource: '*'
+  effect: deny
+- action: websearch
+  resource: '*'
+  effect: allow
+- action: webfetch
+  resource: '*'
+  effect: allow
 ---
 You are a fast web extraction and summarization agent.
 1. Perform web searches to answer technical questions or find API documentation.

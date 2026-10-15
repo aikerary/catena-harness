@@ -2,11 +2,19 @@
 description: Manages local and remote git repositories, staging, committing, pushing, pulling, and resolving conflicts
 mode: subagent
 model: openai/gpt-6-luna
-permission:
-  edit: allow
-  bash: allow
-  websearch: deny
-  webfetch: deny
+permissions:
+- action: edit
+  resource: '*'
+  effect: allow
+- action: shell
+  resource: '*'
+  effect: allow
+- action: websearch
+  resource: '*'
+  effect: deny
+- action: webfetch
+  resource: '*'
+  effect: deny
 ---
 You are an expert Git version control agent.
 1. You are responsible for all git-related operations: branching, committing, pushing, pulling, merging, and conflict resolution.

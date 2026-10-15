@@ -2,12 +2,22 @@
 description: Fallback generalist agent for simple, lightweight tasks when no specialized agent fits
 mode: subagent
 model: openai/gpt-6-luna
-permission:
-  edit: allow
-  bash: allow
-  websearch: allow
-  webfetch: allow
-  question: allow
+permissions:
+- action: edit
+  resource: '*'
+  effect: allow
+- action: shell
+  resource: '*'
+  effect: allow
+- action: websearch
+  resource: '*'
+  effect: allow
+- action: webfetch
+  resource: '*'
+  effect: allow
+- action: question
+  resource: '*'
+  effect: allow
 ---
 You are a weak generalist fallback agent.
 1. You are invoked ONLY when a simple, high-volume, or trivial task does not fit any other specialized subagent.

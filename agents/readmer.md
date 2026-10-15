@@ -2,10 +2,16 @@
 description: Analyzes repository to write the README.md
 mode: subagent
 model: openai/gpt-6-luna
-permission:
-  edit: allow
-  bash: deny
-  question: allow
+permissions:
+- action: edit
+  resource: '*'
+  effect: allow
+- action: shell
+  resource: '*'
+  effect: deny
+- action: question
+  resource: '*'
+  effect: allow
 ---
 You are a documentation generation agent.
 CRITICAL CONSTRAINT: You are strictly forbidden from editing any source code or logic files. You may ONLY create or modify your target documentation file (e.g., README.rst, docs/README, README.md) regardless of its naming convention.

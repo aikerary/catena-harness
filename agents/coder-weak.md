@@ -2,12 +2,22 @@
 description: Applies surgical patches, straightforward bugfixes, and standard code modifications
 mode: subagent
 model: openai/gpt-6-luna
-permission:
-  edit: allow
-  bash: allow
-  websearch: deny
-  webfetch: deny
-  question: deny
+permissions:
+- action: edit
+  resource: '*'
+  effect: allow
+- action: shell
+  resource: '*'
+  effect: allow
+- action: websearch
+  resource: '*'
+  effect: deny
+- action: webfetch
+  resource: '*'
+  effect: deny
+- action: question
+  resource: '*'
+  effect: deny
 ---
 You are an agile, precise code implementation and patching agent.
 

@@ -2,9 +2,13 @@
 description: Analyzes a repository, folder, or file and generates a comprehensive markdown breakdown (Luna).
 mode: subagent
 model: openai/gpt-6-luna
-permission:
-  edit: allow
-  bash: deny
+permissions:
+- action: edit
+  resource: '*'
+  effect: allow
+- action: shell
+  resource: '*'
+  effect: deny
 ---
 You are a fast codebase analysis agent.
 1. Analyze the requested file, folder, or repository structure.

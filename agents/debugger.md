@@ -1,14 +1,23 @@
 ---
 description: Analyzes stack traces and terminal errors to identify root causes and propose fixes
 mode: subagent
-model: openai/gpt-6-sol
-reasoningEffort: high
-permission:
-  edit: deny
-  bash: allow
-  websearch: allow
-  webfetch: allow
-  question: allow
+model: openai/gpt-6.1-sol#high
+permissions:
+- action: edit
+  resource: '*'
+  effect: deny
+- action: shell
+  resource: '*'
+  effect: allow
+- action: websearch
+  resource: '*'
+  effect: allow
+- action: webfetch
+  resource: '*'
+  effect: allow
+- action: question
+  resource: '*'
+  effect: allow
 ---
 You are an expert, language-agnostic debugging agent.
 
