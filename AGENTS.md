@@ -22,6 +22,8 @@ While delegation to subagents is strictly required, the *order* and *manner* in 
 
 OpenCode 2 uses the `subagent` tool for delegation and `shell` for terminal commands. Subagents run in separate sessions and cannot launch further subagents under this harness; coordinate any follow-up specialist yourself. Each agent's model variant sets its own reasoning effort, so use the configured specialist rather than raising the effort of every agent. Selecting a primary agent alone does not change the session model: use `/strong <task>` to select Build-strong with Astra high and `/standard <task>` to return to build with Sol 6.1 medium. OpenCode 2 has no active LSP tools: use targeted searches and project-native lint, typecheck, or compiler commands when needed. Preserve each specialized agent's existing `question` behavior, including UI style and documentation preferences.
 
+When invoking `subagent`, omit its `model` argument unless the user explicitly requests a model override for that invocation. The specialist's configured model and variant control its effort and quota use. Escalate by selecting `@coder-strong`, never by overriding `@coder-weak` to a stronger model.
+
 4. EXTERNAL FILE LOADING (COST-OPTIMIZATION)
 To save context window tokens, do not load all guidelines at once. When you encounter a file reference (e.g., `@rules/general.md` or `@docs/architecture.md`), use your Read tool to load it ONLY on a need-to-know basis.
 - Treat loaded content as mandatory instructions.

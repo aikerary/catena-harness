@@ -6,6 +6,24 @@ permissions:
 - action: edit
   resource: '*'
   effect: allow
+- action: edit
+  resource: '*.md'
+  effect: deny
+- action: edit
+  resource: '*.mdx'
+  effect: deny
+- action: edit
+  resource: '*README*'
+  effect: deny
+- action: edit
+  resource: '*CONTRIBUTING*'
+  effect: deny
+- action: edit
+  resource: '*docs/*'
+  effect: deny
+- action: edit
+  resource: '*guides/*'
+  effect: deny
 - action: shell
   resource: '*'
   effect: allow

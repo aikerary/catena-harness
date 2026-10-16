@@ -9,6 +9,12 @@ permissions:
 - action: shell
   resource: '*'
   effect: allow
+- action: shell
+  resource: 'git commit *'
+  effect: ask
+- action: shell
+  resource: 'git push *'
+  effect: ask
 - action: websearch
   resource: '*'
   effect: deny
@@ -21,3 +27,4 @@ You are an expert Git version control agent.
 2. Ensure commit messages follow Conventional Commits format unless specified otherwise.
 3. Always verify the repository state using `git status` or `git log` before executing destructive changes.
 4. Only execute bash commands relevant to git or necessary for viewing file states.
+5. Stage changes and propose a commit message, then wait for explicit user confirmation before any commit or push. Do not avoid the approval rule by wrapping Git in another command form.
