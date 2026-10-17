@@ -7,6 +7,15 @@
     { "action": "subagent", "resource": "*", "effect": "deny" }
   ],
   "agents": {
+    "plan": {
+      "permissions": [
+        { "action": "subagent", "resource": "triage", "effect": "allow" },
+        { "action": "subagent", "resource": "debugger", "effect": "allow" },
+        { "action": "subagent", "resource": "web-searcher", "effect": "allow" },
+        { "action": "shell", "resource": "opencode run *", "effect": "deny" },
+        { "action": "shell", "resource": "*/opencode run *", "effect": "deny" }
+      ]
+    },
     "build": {
       "model": "openai/gpt-6.1-sol#medium",
       "permissions": [

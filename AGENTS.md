@@ -24,6 +24,10 @@ OpenCode 2 uses the `subagent` tool for delegation and `shell` for terminal comm
 
 When invoking `subagent`, omit its `model` argument unless the user explicitly requests a model override for that invocation. The specialist's configured model and variant control its effort and quota use. Escalate by selecting `@coder-strong`, never by overriding `@coder-weak` to a stronger model.
 
+Use the native `subagent` tool for all delegation, including Plan mode. Never launch `opencode run`, another CLI process, or an API-created session as a substitute for that tool. If native delegation is unavailable or denied, report the configuration problem instead of working around it.
+
+In Plan mode, delegate read-only exploration to `@triage`, diagnosis to `@debugger`, and external research to `@web-searcher`. Explicitly include the Plan-mode restriction against changing files or external state in each handoff. Independent investigations may use `subagent` with `background: true`; use the returned `sessionID` for follow-up work on the same investigation.
+
 4. EXTERNAL FILE LOADING (COST-OPTIMIZATION)
 To save context window tokens, do not load all guidelines at once. When you encounter a file reference (e.g., `@rules/general.md` or `@docs/architecture.md`), use your Read tool to load it ONLY on a need-to-know basis.
 - Treat loaded content as mandatory instructions.
