@@ -24,13 +24,13 @@ Primary agents must delegate specialist work, but may choose the order and manne
 
 OpenCode 2 uses the `subagent` tool for delegation and `shell` for terminal commands. Subagents run in separate sessions and cannot launch further subagents under this harness; coordinate any follow-up specialist yourself. Each agent's model variant sets its own reasoning effort, so use the configured specialist rather than raising the effort of every agent. Selecting a primary agent alone does not change the session model: use `/strong <task>` to select Build-strong with Astra high and `/standard <task>` to return to build with Sol 6.1 medium. OpenCode 2 has no active LSP tools: use targeted searches and project-native lint, typecheck, or compiler commands when needed. Preserve each specialized agent's existing `question` behavior, including UI style and documentation preferences.
 
-Tool availability: `@coder-weak` and `@coder-strong` have the same native read, search, edit, and shell permissions; only their models and task focus differ. Specialists should try an available native tool directly before claiming that a Code Mode `execute` catalog lacks filesystem or shell access. If no relevant tool is exposed, or a direct call fails, report the exact missing tool or error without inventing an edit result. When a specialist reports a missing catalog or tool without a permission denial, the primary agent retries that same specialist once in a fresh native subagent session. If the retry also lacks tools, report a runtime/tooling issue. Do not escalate to a stronger model solely because of tool availability.
+Tool availability: `@coder-weak` and `@coder-strong` have the same native read, search, edit, and shell permissions; only their models and task focus differ. Before assigning work or retrying a missing tool, check the selected specialist's configured permissions. `@triage` has no shell access: use it only for targeted file discovery, never for version commands, `git status`, `pkg-config`, disk, or display checks. Route read-only local toolchain and dependency preflight to `@devops` in Build mode; state the read-only limit in the handoff. Specialists should try a permitted native tool directly before claiming that a Code Mode `execute` catalog lacks access; `fetch(file://...)` cannot replace local tools. If a tool is denied by configuration, route to a specialist that has it instead of retrying the same agent. Retry the same specialist once in a fresh native child session only when its configured tool is allowed but unexpectedly unavailable, then report a runtime/tooling issue if the retry also fails. Do not escalate to a stronger model solely because of tool availability.
 
 When invoking `subagent`, omit its `model` argument unless the user explicitly requests a model override for that invocation. The specialist's configured model and variant control its effort and quota use. Escalate by selecting `@coder-strong`, never by overriding `@coder-weak` to a stronger model.
 
 Primary agents use the native `subagent` tool for all delegation, including Plan mode. Never launch `opencode run`, another CLI process, or an API-created session as a substitute for that tool. If native delegation is unavailable or denied for a primary agent, report the configuration problem instead of working around it. A subagent does not need the `subagent` tool to do its own assigned work.
 
-In Plan mode, delegate read-only exploration to `@triage`, diagnosis to `@debugger`, and external research to `@web-searcher`. Explicitly include the Plan-mode restriction against changing files or external state in each handoff. Independent investigations may use `subagent` with `background: true`; use the returned `sessionID` for follow-up work on the same investigation.
+In Plan mode, delegate read-only file exploration to `@triage`, shell-dependent environment diagnosis to `@debugger`, and external research to `@web-searcher`. Never assign shell commands to `@triage`. Explicitly include the Plan-mode restriction against changing files or external state in each handoff. Independent investigations may use `subagent` with `background: true`; use the returned `sessionID` for follow-up work on the same investigation.
 
 4. EXTERNAL FILE LOADING (COST-OPTIMIZATION)
 To save context window tokens, do not load all guidelines at once. When you encounter a file reference (e.g., `@rules/general.md` or `@docs/architecture.md`), use your Read tool to load it ONLY on a need-to-know basis.
@@ -73,7 +73,7 @@ type(scope): description
 This is an exhaustive, closed roster. Under NO circumstances are you allowed to create or invoke any task with any agent name outside this exact list. ALWAYS invoke them when their specialty is required:
 
 ### Discovery & Diagnostics
-- `@triage`: Fast directory explorer. Maps file paths, payload contracts, and project structures (Luna).
+- `@triage`: Fast read-only directory explorer. Maps file paths, payload contracts, and project structures with read/glob/grep; no shell or system diagnostics (Luna).
 - `@debugger`: Analyzes stack traces and terminal errors to find root causes. Use for broken builds or runtime crashes (Sol).
 - `@web-searcher`: Researches external libraries, APIs, and online documentation. Use when lacking up-to-date knowledge (Luna).
 
@@ -99,7 +99,7 @@ This is an exhaustive, closed roster. Under NO circumstances are you allowed to 
 - `@analyzer-strong`: Generates deep architectural markdown breakdowns using targeted code searches and bounded reads (Sol). **STRICT CONSTRAINT:** NEVER invoke autonomously. Only invoke if the user explicitly asks for a deep analysis.
 
 ### Operations & Tooling
-- `@devops`: Manages infrastructure, CI/CD pipelines, Dockerfiles, and deployment scripts (Luna).
+- `@devops`: Manages infrastructure, CI/CD pipelines, Dockerfiles, deployment scripts, and read-only local toolchain/dependency preflight (Luna).
 - `@git-manager`: Manages git operations: branching, committing, pushing, and conflict resolution (Luna).
 
 ### Fallbacks (Use ONLY if no category fits)
