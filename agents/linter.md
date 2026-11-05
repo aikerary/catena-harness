@@ -1,7 +1,7 @@
 ---
 description: Scans and formats code to ensure high code quality
 mode: subagent
-model: openai/gpt-6-luna#low
+model: bedrock-opencode/claude-haiku-5-5#low
 permissions:
 - action: edit
   resource: '*'

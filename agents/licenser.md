@@ -1,7 +1,7 @@
 ---
 description: Generates the standard LICENSE file
 mode: subagent
-model: openai/gpt-6-luna#low
+model: bedrock-opencode/claude-haiku-5-5#low
 permissions:
 - action: edit
   resource: '*'

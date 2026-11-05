@@ -1,7 +1,7 @@
 ---
 description: Analyzes stack traces and terminal errors to identify root causes and propose fixes
 mode: subagent
-model: openai/gpt-6.1-sol#high
+model: bedrock-opencode/gpt-6-luna#max
 permissions:
 - action: edit
   resource: '*'

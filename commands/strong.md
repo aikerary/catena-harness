@@ -1,7 +1,7 @@
 ---
-description: Run a complex task with Build-strong and Astra at high effort
+description: Run a complex task with Build-strong and Terra at max effort
 agent: Build-strong
-model: openai/gpt-6-astra#high
+model: bedrock-opencode/gpt-6-1-terra#max
 subagent: false
 ---
 $ARGUMENTS

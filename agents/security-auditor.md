@@ -1,7 +1,7 @@
 ---
 description: Scans code and dependency files for vulnerabilities, exposed credentials, and bad practices
 mode: subagent
-model: openai/gpt-6-luna
+model: bedrock-opencode/gpt-6-luna#high
 permissions:
 - action: edit
   resource: '*'

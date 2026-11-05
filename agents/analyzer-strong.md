@@ -1,8 +1,8 @@
 ---
 description: Deeply analyzes a repository, folder, or complex file to generate an exhaustive architectural markdown breakdown
-  (Sol).
+  (Luna high).
 mode: subagent
-model: openai/gpt-6.1-sol#high
+model: bedrock-opencode/gpt-6-luna#high
 permissions:
 - action: edit
   resource: '*'

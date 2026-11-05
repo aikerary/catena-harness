@@ -1,7 +1,7 @@
 ---
 description: Searches the web for up-to-date documentation and APIs
 mode: subagent
-model: openai/gpt-6-luna
+model: bedrock-opencode/gpt-6-luna#medium
 permissions:
 - action: edit
   resource: '*'

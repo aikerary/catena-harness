@@ -1,7 +1,7 @@
 ---
-description: Return to build with Sol 6.1 at medium effort
+description: Return to build with Terra at medium effort
 agent: build
-model: openai/gpt-6.1-sol#medium
+model: bedrock-opencode/gpt-6-1-terra#medium
 subagent: false
 ---
 $ARGUMENTS

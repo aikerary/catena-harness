@@ -1,7 +1,7 @@
 ---
 description: Creates a structured CONTRIBUTING.md file
 mode: subagent
-model: openai/gpt-6-luna
+model: bedrock-opencode/claude-haiku-5-5#medium
 permissions:
 - action: edit
   resource: '*'

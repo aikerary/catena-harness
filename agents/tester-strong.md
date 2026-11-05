@@ -1,7 +1,7 @@
 ---
 description: Analyzes and writes comprehensive, high-quality automated tests for implemented code
 mode: subagent
-model: openai/gpt-6.1-sol#high
+model: bedrock-opencode/gpt-6-luna#high
 permissions:
 - action: edit
   resource: '*'

@@ -1,7 +1,7 @@
 ---
-description: Primary strong orchestrator; use /strong to select Astra high
+description: Primary strong orchestrator; use /strong to select Terra max
 mode: primary
-model: openai/gpt-6-astra#high
+model: bedrock-opencode/gpt-6-1-terra#max
 permissions:
 - action: edit
   resource: '*'

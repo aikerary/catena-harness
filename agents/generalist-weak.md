@@ -1,7 +1,7 @@
 ---
 description: Fallback generalist agent for simple, lightweight tasks when no specialized agent fits
 mode: subagent
-model: openai/gpt-6-luna
+model: bedrock-opencode/gpt-6-luna#medium
 permissions:
 - action: edit
   resource: '*'
