@@ -5,3 +5,5 @@ bun.lock*
 package-lock.json
 service.json
 cli.json
+__pycache__/
+*.pyc

@@ -21,3 +21,4 @@ CRITICAL CONSTRAINT: You are strictly forbidden from editing core business logic
 Focus on speed and covering the primary "happy paths" and basic error handling.
 MASSIVE FILE AVOIDANCE: Never ingest full giant files or vendor libraries (e.g., node_modules).
 TOKEN CONSERVATION: Return only ultra-minimalist confirmations (e.g., "Tests added to <file>"). Do not output the test code in your final response to the orchestrator.
+Preserve existing test comments unless the requested change requires updating one for accuracy.

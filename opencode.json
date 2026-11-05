@@ -1,8 +1,13 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "default_agent": "build",
-  "model": "bedrock-opencode/gpt-6-1-terra#medium",
+  "model": "bedrock-opencode/gpt-6-1-terra",
   "update": "notify",
+  "compaction": {
+    "auto": true,
+    "keep": { "tokens": 8000 },
+    "buffer": "20%"
+  },
   "providers": {
     "bedrock-opencode": {
       "package": "@opencode/ai/providers/amazon-bedrock",
@@ -14,12 +19,20 @@
         "claude-haiku-5-5": {
           "modelID": "global.anthropic.claude-haiku-5-5",
           "name": "Claude Haiku 5.5",
-          "limit": { "context": 122000, "input": 90000, "output": 32000 }
+          "limit": { "context": 122000, "input": 90000, "output": 32000 },
+          "cost": [
+            { "input": 0.10, "output": 0.50, "cache": { "read": 0.01, "write": 0.125 } },
+            { "tier": { "type": "context", "size": 100000 }, "input": 0.50, "output": 2.50, "cache": { "read": 0.05, "write": 0.625 } }
+          ]
         },
         "gpt-6-luna": {
           "modelID": "global.openai.gpt-6-luna",
           "name": "GPT-6 Luna",
           "limit": { "context": 282000, "input": 250000, "output": 32000 },
+          "cost": [
+            { "input": 0.10, "output": 0.50, "cache": { "read": 0.01, "write": 0.125 } },
+            { "tier": { "type": "context", "size": 272000 }, "input": 0.20, "output": 0.75, "cache": { "read": 0.02, "write": 0.25 } }
+          ],
           "capabilities": { "reasoning": { "supported": true, "effort": ["low", "medium", "high"] } },
           "variants": [
             { "id": "max", "body": { "additionalModelRequestFields": { "reasoning": { "effort": "max" } } } }
@@ -29,6 +42,10 @@
           "modelID": "global.openai.gpt-6.1-terra",
           "name": "GPT-6.1 Terra",
           "limit": { "context": 282000, "input": 250000, "output": 32000 },
+          "cost": [
+            { "input": 1.00, "output": 5.00, "cache": { "read": 0.05, "write": 1.25 } },
+            { "tier": { "type": "context", "size": 272000 }, "input": 2.00, "output": 7.50, "cache": { "read": 0.10, "write": 2.50 } }
+          ],
           "capabilities": { "reasoning": { "supported": true, "effort": ["low", "medium", "high"] } },
           "variants": [
             { "id": "max", "body": { "additionalModelRequestFields": { "reasoning": { "effort": "max" } } } }
@@ -44,6 +61,9 @@
     { "action": "subagent", "resource": "*", "effect": "deny" }
   ],
   "agents": {
+    "compaction": { "model": "bedrock-opencode/gpt-6-luna#medium" },
+    "title": { "model": "bedrock-opencode/claude-haiku-5-5#low" },
+    "summary": { "model": "bedrock-opencode/claude-haiku-5-5#low" },
     "plan": {
       "model": "bedrock-opencode/gpt-6-1-terra#high",
       "permissions": [

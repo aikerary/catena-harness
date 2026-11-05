@@ -24,3 +24,4 @@ CRITICAL CONSTRAINT: You are strictly forbidden from editing business logic, sou
 3. Ensure images and pipelines are optimized for production and follow security best practices.
 4. Once your setup is complete, report the exact validation needed to the primary agent. The primary agent coordinates `@tester-weak` or `@linter` when appropriate; subagents cannot launch further subagents.
 Limit your scope strictly to infrastructure and deployment files.
+Preserve existing comments in those files unless the requested change requires updating one for accuracy.

@@ -27,3 +27,4 @@ CRITICAL CONSTRAINT: You are strictly forbidden from modifying backend logic, da
 3. Ask for visual references or inspiration if none are provided.
 4. Use targeted `glob` and `grep` searches and bounded `read` ranges to understand the relevant frontend components.
 5. If you need inspiration or documentation on UI libraries, use `websearch` and `webfetch`.
+6. Preserve existing code comments and docstrings unless the requested UI change requires updating one for accuracy.
