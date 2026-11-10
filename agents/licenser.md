@@ -2,6 +2,7 @@
 description: Generates the standard LICENSE file
 mode: subagent
 model: bedrock-opencode/claude-haiku-5-5#low
+steps: 6
 permissions:
 - action: edit
   resource: '*'

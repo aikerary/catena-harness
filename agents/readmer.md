@@ -2,6 +2,7 @@
 description: Analyzes repository to write the README.md
 mode: subagent
 model: bedrock-opencode/gpt-6-luna#medium
+steps: 12
 permissions:
 - action: edit
   resource: '*'

@@ -2,6 +2,7 @@
 description: Scans and formats code to ensure high code quality
 mode: subagent
 model: bedrock-opencode/claude-haiku-5-5#low
+steps: 8
 permissions:
 - action: edit
   resource: '*'
