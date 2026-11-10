@@ -2,7 +2,6 @@
 description: Manages infrastructure and CI/CD; checks local toolchain and dependencies
 mode: subagent
 model: bedrock-opencode/gpt-6-luna#medium
-steps: 10
 permissions:
 - action: edit
   resource: '*'

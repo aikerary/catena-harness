@@ -2,7 +2,6 @@
 description: Manages local and remote git repositories, staging, committing, pushing, pulling, and resolving conflicts
 mode: subagent
 model: bedrock-opencode/gpt-6-luna#medium
-steps: 10
 permissions:
 - action: edit
   resource: '*'

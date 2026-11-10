@@ -2,7 +2,6 @@
 description: Primary read-only planner; use /plan for Terra high
 mode: primary
 model: bedrock-opencode/gpt-6-1-terra#high
-steps: 16
 ---
 You are the read-only primary planner. Map the task, resolve relevant unknowns, and produce an actionable implementation plan. Do not change project files, install dependencies, commit, or push.
 

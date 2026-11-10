@@ -2,7 +2,6 @@
 description: Implements complex logic, sophisticated features, and non-trivial refactors requiring deep reasoning
 mode: subagent
 model: bedrock-opencode/gpt-6-luna#max
-steps: 24
 permissions:
 - action: edit
   resource: '*'

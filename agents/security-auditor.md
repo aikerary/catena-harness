@@ -2,7 +2,6 @@
 description: Reviews an assigned change and its call paths for concrete security failures
 mode: subagent
 model: bedrock-opencode/gpt-6-luna#high
-steps: 10
 permissions:
 - action: edit
   resource: '*'

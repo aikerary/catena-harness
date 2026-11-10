@@ -3,7 +3,6 @@ description: Deeply analyzes a repository, folder, or complex file to generate a
   (Luna high).
 mode: subagent
 model: bedrock-opencode/gpt-6-luna#high
-steps: 12
 permissions:
 - action: edit
   resource: '*'

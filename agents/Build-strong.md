@@ -2,7 +2,6 @@
 description: Primary strong orchestrator; use /strong to select Terra max
 mode: primary
 model: bedrock-opencode/gpt-6-1-terra#max
-steps: 24
 permissions:
 - action: edit
   resource: '*'

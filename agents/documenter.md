@@ -2,7 +2,6 @@
 description: Generates inline API documentation, docstrings, and architectural diagrams.
 mode: subagent
 model: bedrock-opencode/gpt-6-luna#medium
-steps: 10
 permissions:
 - action: edit
   resource: '*'

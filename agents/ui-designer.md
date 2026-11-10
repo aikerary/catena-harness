@@ -2,7 +2,6 @@
 description: Designs and implements beautiful UI/UX improvements, aesthetics, and styles.
 mode: subagent
 model: bedrock-opencode/gpt-6-luna#high
-steps: 16
 permissions:
 - action: edit
   resource: '*'

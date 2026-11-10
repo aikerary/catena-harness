@@ -2,7 +2,6 @@
 description: Applies surgical patches, straightforward bugfixes, and standard code modifications
 mode: subagent
 model: bedrock-opencode/gpt-6-luna#medium
-steps: 16
 permissions:
 - action: edit
   resource: '*'

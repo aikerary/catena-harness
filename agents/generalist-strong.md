@@ -2,7 +2,6 @@
 description: Fallback generalist agent for complex tasks requiring deep reasoning when no specialized agent fits
 mode: subagent
 model: bedrock-opencode/gpt-6-luna#max
-steps: 16
 permissions:
 - action: edit
   resource: '*'

@@ -2,7 +2,6 @@
 description: Analyzes stack traces and terminal errors to identify root causes and propose fixes
 mode: subagent
 model: bedrock-opencode/gpt-6-luna#max
-steps: 12
 permissions:
 - action: edit
   resource: '*'

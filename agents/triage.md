@@ -2,7 +2,6 @@
 description: Explores repository files with read/glob/grep; no shell or system diagnostics
 mode: subagent
 model: bedrock-opencode/claude-haiku-5-5#low
-steps: 8
 permissions:
 - action: edit
   resource: '*'

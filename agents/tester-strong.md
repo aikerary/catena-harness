@@ -2,7 +2,6 @@
 description: Analyzes and writes comprehensive, high-quality automated tests for implemented code
 mode: subagent
 model: bedrock-opencode/gpt-6-luna#high
-steps: 18
 permissions:
 - action: edit
   resource: '*'

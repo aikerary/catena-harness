@@ -2,7 +2,6 @@
 description: Creates a structured CONTRIBUTING.md file
 mode: subagent
 model: bedrock-opencode/claude-haiku-5-5#medium
-steps: 8
 permissions:
 - action: edit
   resource: '*'
