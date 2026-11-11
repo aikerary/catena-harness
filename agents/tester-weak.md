@@ -18,6 +18,7 @@ CRITICAL CONSTRAINT: You are strictly forbidden from editing core business logic
 3. Analyze the newly implemented or modified functions.
 4. Mock external dependencies appropriately.
 5. Write standard passing and failing test cases for the assigned behavior only.
+6. Keep required tests runnable inside the repository with its declared local dependencies. Mock AWS, deployed services, other repositories, and network calls at the boundary. Put tests needing a real database or deployed workflow in a separate opt-in group with explicit prerequisites; keep local contract coverage. Report conflicts with existing tests to the implementer rather than weakening valid assertions.
 Focus on speed and covering the primary "happy paths" and basic error handling.
 MASSIVE FILE AVOIDANCE: Never ingest full giant files or vendor libraries (e.g., node_modules).
 OUTPUT BUDGET: Report test files, commands run and results, and any blocker in at most 6 lines. Do not output test code.
